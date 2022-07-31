@@ -1,0 +1,264 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        /*给main设置宽高,居中,弹性布局,为了直观的看到效果,不用在意*/
+        main{
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background: url("banner.png");
+            background-repeat: no-repeat;
+            height:600px
+        }
+        .box {
+            background: url("logo.png");
+            background-repeat: no-repeat;
+            margin-left: 47%;
+            margin-top: -420px;
+            height: 90px;
+        }
+        #box1{
+
+        }
+        .box2{
+            background: url("1.png");
+            background-repeat: no-repeat;
+            background-position: 4px 7px;
+            height: 105px;
+            margin-left: 20px;
+        }
+        .input_text{
+            width: 310px;
+            margin-top: 18px;
+            border-width: 0;
+            height: 30px;
+            font-size: 17px;
+        }
+        .h_style1{
+            border-bottom-color: darkgrey;
+            margin-top: -45px;
+            position: absolute;
+            margin-left: 35px;
+            width: 30%;
+        }
+        .h_style2{
+            border-bottom-color: darkgray;
+            margin-top: 15px;
+            position: absolute;
+            margin-left: 35px;
+            width: 30%;
+        }
+        a{
+            color: darkgrey;
+            position: absolute;
+            margin-top: 10px;
+            font-size:15px;
+            text-decoration: none;
+        }
+        .login_button{
+            width: 370px;
+            height: 45px;
+            position: absolute;
+            margin-top: 70px;
+            margin-left: -345px;
+            background: linear-gradient(to right,#494aff,#4395ff );
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0px 2px 6px 1px darkgrey;
+            border: white;
+        }
+        .h5_1{
+            color: darkgrey;
+            position: absolute;
+            margin-top: 130px;
+            margin-left: -250px;
+        }
+        .a_1{
+            text-decoration: none;
+            color: #494aff;
+            position: absolute;
+            margin-top: 130px;
+            margin-left: -150px;
+        }
+        h5{
+            color: darkgrey;
+            position: absolute;
+            margin-top: 200px;
+            margin-left: 40px;
+        }
+        .src_1{
+            position: absolute;margin-left: -300px;margin-top: 250px
+        }
+        .src_2{
+            position: absolute;margin-left: -180px;margin-top: 250px
+        }
+        .src_3{
+            position: absolute;margin-left: -65px;margin-top: 250px
+        }
+        .flex{
+            display: flex;
+            height:50px;
+            flex-direction: row;
+            margin-top: 215px;
+            margin-left: 110px;
+            justify-content: space-between;
+        }
+
+        /*@media，设置媒体查询，设置一些样式仅在某些条件下生效
+         max-width:900px：当窗口宽度小于900px时
+         媒体查询是响应式页面的基础*/
+        @media (min-width:1000px) {
+            main{
+                width: 70%;
+                margin-top: -150px;
+            }
+            #box1{
+                width:35%;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0px 4px 12px 1px darkgrey;
+                height: 65%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+            }
+            .login_button{
+                font-size: 17px;
+            }
+            h5{
+                margin-left: 75px;
+            }
+            .flex{
+                width:270px;
+            }
+        }
+
+
+        @media(max-width:600px){
+            main{
+                width: 30%;
+                margin: 30px 100px;
+            }
+            main{
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                background: url("banner.png");
+                background-repeat: no-repeat;
+                background-position: -330px -300px;
+                height:600px;
+                margin-top: -100px;
+            }
+            a{
+                margin-left:-60px;
+            }
+            .login_button{
+                width: 330px;
+                margin-left: -350px;
+            }
+            .h_style1{
+                margin-left: 41%;
+                margin-top: -3%;
+                width: 18%;
+            }
+            .h_style2{
+                margin-left: 41%;
+                margin-top: 0.5%;
+                width: 18%;
+            }
+            .input_text{
+                margin-left: 50px;
+            }
+            h5{
+                margin-left: 37%;
+            }
+            .src_1{
+                position: absolute;margin-left: -250px;margin-top: 250px
+            }
+            .src_2{
+                position: absolute;margin-left: -130px;margin-top: 250px
+            }
+            .src_3{
+                position: absolute;margin-left: -15px;margin-top: 250px
+            }
+            .box2{
+                margin-left:38%;
+            }
+            .flex{
+                width: 250px;
+                margin-left: 44%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<main></main>
+<div class = "box"></div>
+<div id = "box1">
+    <div class = "box2" ></div>
+    <hr class="h_style1">
+    </hr>
+    <hr class="h_style2">
+    </hr>
+    <h5>
+        ----------------------------第三方登录 ---------------------------
+    </h5>
+
+    <table align="center">
+        <td><form style="margin-top: -110px">
+            <input  class = "input_text" type="text" name="账号"  placeholder="请输入手机号、邮箱" >
+            <br><br>
+            <input class = "input_text" type="password" name="密码" placeholder="请输入密码">
+        </form></td>
+        <td>
+            <a href ="">忘记密码?</a>
+        </td>
+        <td>
+            <form>
+                <input class="login_button" type="submit"value="立即登录" />
+            </form>
+        </td>
+        <td>
+            <h5 class="h5_1">还没有账号?</h5>
+            <a href ="" class="a_1">马上注册</a>
+        </td>
+<!--        <td>-->
+<!--            <a href ="">-->
+<!--                <img src="wechat.png" class="src_1">-->
+<!--            </a>-->
+<!--            <a href ="">-->
+<!--                <img src="QQ%20.png" class="src_2">-->
+<!--            </a>-->
+<!--            <a href ="">-->
+<!--                <img src="wb.png" class="src_3">-->
+<!--            </a>-->
+<!--        </td>-->
+    </table>
+    <div class="flex">
+        <div>
+            <a href="">
+                <img src="wechat.png">
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="QQ%20.png" style="margin-left: 12%">
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="wb.png" style="margin-left: 12%">
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
